@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.black-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.image-overlay{
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 60%, rgba(0,0,0,1));
+}
+
+.sm-card{
+    padding: 16px;
+    box-sizing: border-box;
+    border: 1.5px solid rgba(2, 6, 12, 0.1);
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+}
+*{
+    font-family: 'Gilroy';
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Medium.ttf') format('truetype');
+    /* font-weight: normal;
+    font-style: normal; */
+  }
+  
