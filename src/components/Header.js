@@ -31,11 +31,27 @@ export default function Header() {
   };
 
   const links = [
-    { icon: <IoIosSearch className="text-[20px]"/>, text: "Search", link: "/search" },
-    { icon: <CiDiscount1 className="text-[20px]"/>, text: "Offers", sup: "new" },
-    { icon: <IoHelpBuoyOutline className="text-[20px]" />, text: "Help", link: "/help" },
-    { icon: <CiUser className="text-[20px]"/>, text: "Sign In" },
-    { icon: <RiShoppingCartLine className="text-[20px]" />, text: "Cart" },
+    {
+      icon: <IoIosSearch className="text-[20px]" />,
+      text: "Search",
+      link: "/search",
+    },
+    {
+      icon: <CiDiscount1 className="text-[20px]" />,
+      text: "Offers",
+      sup: "new",
+    },
+    {
+      icon: <IoHelpBuoyOutline className="text-[20px]" />,
+      text: "Help",
+      link: "/help",
+    },
+    { icon: <CiUser className="text-[20px]" />, text: "Sign In" },
+    {
+      icon: <RiShoppingCartLine className="text-[20px]" />,
+      text: "Cart",
+      link: "/cart",
+    },
   ];
 
   return (
@@ -60,7 +76,11 @@ export default function Header() {
         >
           {/* Close Icon */}
           <div className="flex justify-start p-5 ms-10">
-            <IoMdClose size={24} className="cursor-pointer" onClick={hideLocationMenu} />
+            <IoMdClose
+              size={24}
+              className="cursor-pointer"
+              onClick={hideLocationMenu}
+            />
           </div>
 
           {/* Search and Location Section */}
@@ -102,14 +122,26 @@ export default function Header() {
         >
           {/* Close Icon */}
           <div className="flex justify-start p-5 ms-10">
-            <IoMdClose size={24} className="cursor-pointer" onClick={hideSignInMenu} />
+            <IoMdClose
+              size={24}
+              className="cursor-pointer"
+              onClick={hideSignInMenu}
+            />
           </div>
 
           {/* Sign-in Section */}
           <div className="flex flex-col gap-4 p-6 ms-10">
-            <h2 className="text-xl font-semibold">Login</h2>
-<span className="flex gap-1">            <p className="text-gray-500 ">or </p><p className="text-red-600">create an account</p>
-</span>            
+            <div className="flex justify-between align-middle">
+              <div className="flex flex-col justify-center align-middle ">
+                <h2 className="text-xl font-semibold">Login</h2>
+                <span className="flex gap-1">
+                  {" "}
+                  <p className="text-gray-500 ">or </p>
+                  <p className="text-red-600">create an account</p>
+                </span>
+              </div>
+              <img alt="" src="images/login.avif" className="w-32" />
+            </div>
             <input
               type="text"
               placeholder="Phone number"
@@ -119,9 +151,11 @@ export default function Header() {
             <button className="bg-orange-500 text-white p-3 rounded-md w-full mt-4">
               LOGIN
             </button>
-            
+
             <p className="text-gray-500 text-sm mt-2">
-              By clicking on Login, I accept the <span className="text-blue-500">Terms & Conditions</span> & <span className="text-blue-500">Privacy Policy</span>
+              By clicking on Login, I accept the{" "}
+              <span className="text-blue-500">Terms & Conditions</span> &{" "}
+              <span className="text-blue-500">Privacy Policy</span>
             </p>
           </div>
         </div>
@@ -130,8 +164,8 @@ export default function Header() {
       {/* Header */}
       <header className="sticky top-0 z-[999] bg-white p-[15px]  text-[#686b78]">
         <div className="max-w-[1200px] mx-auto flex items-center">
-          <div className="w-[100px]" onClick={()=> navigate('/')}>
-            <img src="images/swiggy-1.svg" alt="logo"  />
+          <div className="w-[100px]" onClick={() => navigate("/")}>
+            <img src="images/swiggy-1.svg" alt="logo" />
           </div>
           <div>
             <span className="font-bold border-b-[3px] border-[black] mx-1">
